@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Not deployed
+> <a href="https://shayan1234554321.github.io/Leader-board/dist/" >Live</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
