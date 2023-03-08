@@ -2,7 +2,7 @@ import './style.css';
 import Scores from './modules/object.js';
 import { upload, get } from './modules/API.js';
 
-/* eslint-disable no-undef */
+/* eslint-disable-next-line no-undef */
 const toast = Swal.mixin({
   toast: true,
   icon: 'success',
@@ -19,7 +19,9 @@ const form = document.getElementById('form');
 const name = document.getElementById('name');
 const score = document.getElementById('score');
 const scores = document.getElementById('scores');
+const refresh = document.getElementById('refresh');
 const data = new Scores();
+
 // -------------------- Functions -----------------
 
 const UpdateScoresHTML = () => {
@@ -50,6 +52,16 @@ const formFunction = () => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   formFunction();
+});
+
+refresh.addEventListener('click', () => {
+  get().then((res) => {
+    data.array = res.result;
+    UpdateScoresHTML();
+  });
+  toast.fire({
+    title: 'Refreshed',
+  });
 });
 
 window.addEventListener('DOMContentLoaded', () => {
