@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Exercise</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leader Board</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <header>LEADER BOARD</header>
+    <div class="container">
+      <div class="recentScores">
+        <h3>Recent Scores</h3>
+        <div class="mobile">
+          <ul class="scores" id="scores">
+          </ul>
+          <button id="refresh">Refresh</button>
+        </div>
+      </div>
+      <form id="form">
+        <h3>Add Your Score</h3>
+        <input id="name" type="text" required placeholder="Your Name" />
+        <input
+          id="score"
+          type="number"
+          required
+          placeholder="Your Score"
+          min="1"
+          max="99999"
+        />
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 </html>
