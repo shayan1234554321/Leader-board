@@ -1,4 +1,4 @@
-const upload = async (object) => {
+const post = async (object) => {
   try {
     const response = await fetch(
       'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ESR4hOd8yk9LvYkRVQNB/scores/',
@@ -33,4 +33,4 @@ const get = async () => {
   return 'working';
 };
 
-export { upload, get };
+export { post, get };

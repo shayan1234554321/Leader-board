@@ -1,6 +1,6 @@
 import './style.css';
 import Scores from './modules/object.js';
-import { upload, get } from './modules/API.js';
+import { post, get } from './modules/API.js';
 
 /* eslint-disable-next-line no-undef */
 const toast = Swal.mixin({
@@ -37,7 +37,7 @@ const UpdateScoresHTML = () => {
 
 const formFunction = () => {
   data.add({ user: name.value, score: score.value });
-  upload({ user: name.value, score: score.value }).then(() => {
+  post({ user: name.value, score: score.value }).then(() => {
     UpdateScoresHTML();
   });
   name.value = '';
